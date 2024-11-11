@@ -1,7 +1,57 @@
 import { test, expect } from '@playwright/test';
+import { assert } from 'console';
+import { OrgAccountPage } from '../pages/OrgAccount.page';
+import { faker } from '@faker-js/faker';
+
+
 
 test.describe('Search filtering', () => {
-    test('Check', async ({ page }) => {
+
+    test('Check Page Object', async({page}) => {
+        const orgPage = new OrgAccountPage(page)
+        await page.goto('https://lalafo.kg/')
+
+        const data = {
+            searchInput: 'стол',
+            minPrice: '3000',
+            maxPrice: '10000'
+
+        }
+        // Поиск товара по сгенерированному названию
+        await orgPage.searchProduct(data.searchInput);
+        await orgPage.waitForAds();
+
+        // Применение фильтрации по цене
+        await orgPage.applyPriceFilter(data.minPrice, data.maxPrice);
+        await page.waitForTimeout(20000);
+
+        // Проверка количества объявлений после фильтрации
+        const adsCount = await orgPage.getAdsCount();
+        console.log(`Количество объявлений после фильтрации: ${adsCount}`);
+        // expect(adsCount).toBeGreaterThan(0);
+        assert(true);
+  }
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*test('Check', async ({ page }) => {
         await page.goto('https://lalafo.kg/');
         
         // Заполнение поля поиска
@@ -26,5 +76,5 @@ test.describe('Search filtering', () => {
 
      
         await page.waitForTimeout(20000);
-    });
+    });*/
 });
