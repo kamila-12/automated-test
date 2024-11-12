@@ -52,7 +52,7 @@ The project was implemented on TypeScript using Playwright
 │   ├── OrgAccountPage.ts   # The page model for working with the site lalafa.kg
 |
 ├── /tests                  # The folder with tests
-│   ├── filtering.search.ts # Tets for filtering and searching products
+│   ├── filtering.search.spec.ts # Tets for filtering and searching products
 │   
 ├── /test-examples          # The folder with example test
     ├── demo-todo-app.spec.ts
