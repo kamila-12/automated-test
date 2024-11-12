@@ -76,4 +76,4 @@ The project was implemented on TypeScript using Playwright
 |                         | 2. Set the price from 3000 to 10000 and click "Filter". | Products within the specified range are shown. | Products outside the specified range are shown. |
 
 ## Links to test cases
-- /tests/filtering.search.ts – Tests related to search functionality and price filtering.
+- /tests/filtering.search.spec.ts – Tests related to search functionality and price filtering.
