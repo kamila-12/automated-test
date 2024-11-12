@@ -23,11 +23,13 @@ export class OrgAccountPage {
 
     }
     async waitForAds() {
-        await this.adTitles.waitFor({ timeout: 20000, state: 'visible' });
+        await this.adTitles.first().waitFor({ timeout: 20000, state: 'visible' });
     }
     async getAdsCount() {
-        return await this.adTitles.count();
+        const visibleAds = await this.adTitles.filter({ hasText: '' }).count();
+        return visibleAds;
     }
+    
     async applyPriceFilter(minPrice: string, maxPrice: string) {
         await this.priceFromInput.fill(minPrice);
         await this.priceToInput.fill(maxPrice);

@@ -15,11 +15,15 @@ This project is designed for automated testing of the functionality of the websi
 The project was implemented on TypeScript using Playwright
 
 ## Installation
-1. Install Node.js
+1. Clone project from remote repository on GitHub
+    ```
+    git clone https://github.com/kamila-12/automated-test.git
+    ```
+2. Install Node.js
     ```
     npm install
     ```
-2. Install Playwright
+3. Install Playwright
 
     ```
     npm init playwright@latest
