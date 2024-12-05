@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { assert } from 'console';
-import { OrgAccountPage } from '../pages/OrgAccount.page';
+import { OrgAccountPage } from '../../pages/OrgAccount.page';
 
 
 
