@@ -51,8 +51,14 @@ The project was implemented on TypeScript using Playwright
 ├── /pages                  # The folder with the page model (Page Object Model)
 │   ├── OrgAccountPage.ts   # The page model for working with the site lalafa.kg
 |
-├── /tests                  # The folder with tests
-│   ├── filtering.search.spec.ts # Tets for filtering and searching products
+├── /tests       
+    ├── /api           # The folder with api tests
+        ├── code-snippet-from-postman.js
+        ├── search_filtering.spec.ts
+    ├── /postman_collections
+        ├── lalafo_serachFiltering.postman_collection.json
+    ├── /ui                          # The folder with ui tests
+│       ├── filtering.search.spec.ts # Tets for filtering and searching products
 │   
 ├── /test-examples          # The folder with example test
     ├── demo-todo-app.spec.ts
@@ -76,4 +82,6 @@ The project was implemented on TypeScript using Playwright
 |                         | 2. Set the price from 3000 to 10000 and click "Filter". | Products within the specified range are shown. | Products outside the specified range are shown. |
 
 ## Links to test cases
-- /tests/filtering.search.spec.ts – Tests related to search functionality and price filtering.
+- /tests/ui/filtering.search.spec.ts 
+- /tests/api/search_filtering.spec.ts– Tests related to search functionality and price filtering.
+
